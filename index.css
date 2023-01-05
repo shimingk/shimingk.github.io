@@ -1,6 +1,26 @@
 nav {
-  display: flexbox;
+  display: flex;
   background-color: aliceblue;
   text-align: center;
+  justify-content: space-evenly;
   color: cadetblue;
 }
+
+.picture-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture:hover {
+  filter: brightness(50%);
+}
+
+a:hover {
+  background-color: aqua;
+}
+
+/* CSS unit: rem - most universal
+  pixels are most easy
+*/
