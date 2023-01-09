@@ -1,5 +1,13 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+  display: flexbox;
+}
+
+h1, h2, h3, p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
@@ -15,16 +23,61 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .picture:hover {
   filter: brightness(50%);
+  cursor: pointer;
+  transition: 1s;
 }
 
 a:hover {
-  background-color: aqua;
+  animation:alternate;
 }
 
-/* CSS unit: rem - most universal
-  pixels are most easy
-*/
+.fade-container {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* margin-top: 30rem; */
+  position: relative;
+}
+
+.fade-container .faded {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* left: 0;
+  right: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* background-color: white; */
+}
+
+.fade-text {
+  transition: all 1s ease-out;
+  transform: translateY(0px);
+}
+
+.fade-in {
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; */
+  font-size: 2.5em;
+  /* background-color: aquamarine; */
+  text-transform: uppercase;
+  opacity: 0;
+  color: beige;
+  /* transition-delay: 0.2s;
+  transition-duration: 0.3s; */
+}
+
+.fade-container:hover .fade-text {
+  opacity: 1;
+  transform: translateY(10px);
+}
