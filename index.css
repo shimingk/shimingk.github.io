@@ -8,6 +8,9 @@ h1, h2, h3, p {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
+  border: 5px;
+  margin: 5px;
 }
 
 nav {
@@ -32,6 +35,22 @@ nav {
   transition: 1s;
 }
 
+.example-picture {
+  width: 50rem;
+  height: auto;
+  border: 0.25rem solid black;
+}
+
+#mp0 {
+  color: aliceblue;
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
 a:hover {
   animation:alternate;
 }
@@ -54,7 +73,6 @@ a:hover {
   right: 0;
   /* margin-left: auto;
   margin-right: auto; */
-  /* background-color: white; */
 }
 
 .fade-text {
@@ -63,21 +81,15 @@ a:hover {
 }
 
 .fade-in {
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto; */
   font-size: 2.5em;
-  /* background-color: aquamarine; */
   text-transform: uppercase;
   opacity: 0;
   color: beige;
-  /* transition-delay: 0.2s;
-  transition-duration: 0.3s; */
+  transition-delay: 0.2s;
+  transition-duration: 0.3s;
 }
 
 .fade-container:hover .fade-text {
   opacity: 1;
-  transform: translateY(10px);
+  transform: translateY(25px);
 }
