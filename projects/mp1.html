@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <title>MP1</title>
+  <body>
+    <div class="proj-container">
+      <nav>
+        <a href="../index.html">home</a>
+        <a href="../about/about.html">about</a>
+        <!-- <a href="./projects.html">projects</a> -->
+        <a href="../resources.html">resources</a>
+      </nav>
+      <div>
+        <h2>Projects</h2>
+        <p class="intro-paragraph">
+          <em>TurBrosski!</em>
+        </p>
+        <div id="mp1">
+          <h3>MP1 - Pomo-Timer Browser Extension</h3>
+          <h4>Overview and Usage</h4>
+          <p>
+            The Pomo-Timer Browser Extension utilizes the Pomodoro technique to improve the user's focus
+            on being productive and reduce procrastination by providing a path to a more structured workflow.
+            My implementation of the Pomodoro technique involves 25 minutes of productivity and 5 minutes of break time!
+          </p>
+          <h5>Here's it in action:</h5>
+          <img src="mp1-snip.gif">
+          <h5>How to use Pomo-Timer:</h5>
+          <ol>
+            <li>Download the code from my <a href="https://github.com/shimingk/pomo-timer-extension" target="_blank">repository</a></li>
+            <li>Go to browser extensions menu <code>(chrome://extensions)</code> to load the extension </li>
+            <li>Load unpacked -> select the folder you downloaded</li>
+            <li>On the browser nav bar, click to select the puzzle symbol to open a drop down menu for extensions</li>
+            <li>Pin the Pomo-Timer extension</li>
+            <li>And you're ready to go!</li>
+          </ol>
+          <h4>The Development Process</h4>
+          <ol>
+            <li>Looked through <a href="https://developer.chrome.com/docs/extensions/reference/" target="_blank">Chrome Extension API Docs</a> & <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples" target="_blank">examples</a> for inspiration</li>
+            <li>Created the Pomo-Timer favicon</li>
+            <li>Created appropriate <code>HTML</code>, <code>CSS</code>, <code>JS</code>, and <code>manifest.json</code> files</li>
+            <li>Implemented and tested Chrome API notifications based on <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples" target="_blank">examples</a></li>
+            <li>Tested button functionality with Chrome API implementations and repeat steps 4-5!</li>
+          </ol>
+          <img
+            src="mp1-popup.jpg"
+            alt="screenshot of the Pomo-Timer popup"
+          /> <br>
+          <img src="mp1-notif.jpg" alt="screenshot of pomo-timer notification">
+          <h4>Issue Deep Dive</h4>
+          <p>
+            The biggest issue I found in this project was getting an understanding of how Chrome APIs work. Even though I found the
+            documentation of the Chrome API Reference to be elegant to the eye to read, I did not found any examples for the API calls
+            I wanted to use for my extension. As a result, I resorted to the water-alarm-notification extension example from the many Chrome API examples.
+          </p>
+          <h4>Looking forward</h4>
+          <p>
+            I aim to continuing implementing/improving on the following for this browser extension:
+            <ul>
+              <li>Implement a countdown timer for the popup</li>
+              <li>General content/element organization & design</li>
+              <li>Allow customization for times for breaks and work time</li>
+              <li>Allow for continuous automatic cycling of the Pomodora technique (right now it only works for 1 cycle)</li>
+              <li>Implementing a pause button</li>
+            </ul>
+          </p>
+          <h4>Kudos to the following:</h4>
+          <ul>
+            <li><a href="https://developer.chrome.com/docs/extensions/reference/" target="_blank">Chrome Extension API Docs</a></li>
+            <li><a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples" target="_blank">Chrome extension examples</a></li>
+            <li><a href="https://github.com/branchwelder" target="_blank">Hannah Twigg-Smith</a> for refering to the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification" target="_blank">water-alarm-notification</a> extension example</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
