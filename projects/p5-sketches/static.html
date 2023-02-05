@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Static</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        noStroke();
+        noLoop();
+      }
+      function draw() {
+        background('black');
+        for (let i = 10; i < width; i += 5) {
+          if (i % 20 === 0) {
+          stroke(255);
+          line(i, i, i, height);
+          }
+        }
+        for (let i = 10; i < height; i += 10) {
+          if (i % 20 === 0) {
+          line(i, i, width, i);
+          triangle(i, i, i + 5, i + 5, i - 5, i - 5);
+          }
+        }
+      }
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>
