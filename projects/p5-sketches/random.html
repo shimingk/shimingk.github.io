@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Random</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      let y;
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        noStroke();
+        noLoop();
+      }
+      function draw() {
+        y = height / 2;
+        background('black');
+        stroke(255);
+        line(0, y, width, y);
+        for (let i = 10; i < width; i += 10) {
+          let halfLength = random(windowHeight);
+          strokeWeight(random(5));
+          line(i, y, i, halfLength);
+          if (halfLength - y < 0) {
+            line(i, y, i, windowHeight - halfLength);
+          } else {
+            line(i, y, i, y - (halfLength - y));
+          }
+        }
+      }
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>
