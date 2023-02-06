@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Random</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      let rate, size;
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        noStroke();
+        fill(255,115,100);
+        rate = 5;
+      }
+
+      function draw() {
+        rate += 0.1;
+        size = 2.5 * (cos(rate)+ sin(rate)) + 115;
+        background('teal');
+        translate(width / 2, height / 2);
+        rotate(PI * 4.25);
+        square(0, 0, size);
+        circle(size / 2, 0, size);
+        circle(0, size / 2, size);
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>
