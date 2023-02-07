@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Audio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js" integrity="sha512-3WFaXQUsbGieECwv3t3DvyAkZ7pp+/rIKOQnx7NKhfwIF0u2l+DYsE2eF635ewJVj3YTU4/Ug6UqEkSTZCiSew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js" integrity="sha512-TU9AWtV5uUZPX8dbBAH8NQF1tSdigPRRT82vllAQ1Ke28puiqLA6ZVKxtUGlgrH6yWFnkKy+sE6luNEGH9ar0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      // A#4 - 70
+      // A#5 - 82
+      // A#6 - 94
+      // C4 - 60
+      // C5 - 72
+      // D#4 - 63
+      // D#5 - 75
+      // D5 - 74
+      // D6 - 86
+      // F4 - 65
+      // F5 - 77
+      // G#3 - 56
+      // G#4 - 68
+      // G#5 - 80
+      // G5 - 79
+      // A#4 A#5 D6 A#4 A#5 A#6 D#5
+      // D#4 A#5 F5 D#5 F5 A#6 D#5
+
+      // G#3 D#4 C5 A#5 C5 D#5 D#4 G#3
+      // G#4 C5 A#5 C4 A#5 D#5 F5
+
+      // A#4 A#5 D6 D5 F4 A#6 D#5
+      // D#4 A#5 F5 D#5 G#5 G5 D#5 A#5
+
+      // G#3 C5 D#4 G#3 A#5 D#4 C5 G#3 C5 A#5 C4 D#5 F5
+      let n1 = [
+      70, 82, 86, 70, 82, 94, 75,
+      63, 82, 77, 75, 77, 94, 75,
+
+      56, 63, 72, 70, 72, 75, 63, 56,
+      68, 72, 82, 60, 82, 75, 77,
+
+      70, 82, 86, 74, 65, 94, 75,
+      63, 82, 77, 75, 80, 79, 75, 82,
+
+      56, 72, 63, 56, 82, 63, 72, 56, 72, 82, 60, 75, 77
+      ];
+
+      let currentNote = 0;
+      let osc, cSize, cX, cY;
+
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        colorMode(HSL);
+
+        // Create  oscillator
+        osc = new p5.Oscillator();
+        osc.start();
+        osc.amp(0);
+
+        // Initial values for circle
+        cSize = 300;
+        cX = width / 2;
+        cY = height / 2;
+      }
+
+      function draw() {
+        background(0);
+        if (overCircle(cX, cY, cSize)) {
+            // If mouse is over the circle, change the color
+            if (mouseIsPressed) {
+            // If the mouse is pressed make the fill more saturated
+              fill(50, 100, 80);
+            } else {
+            // If just hovering, it is not as saturated
+              fill(80, 70, 80);
+            }
+        } else {
+            // When mouse is not over the circle it is white
+            fill(230);
+        }
+        // Draw circle
+        circle(cX, cY, cSize);
+        // rect(width / 2 - 50, height / 2 - 100, 25, 200);
+        // rect(width / 2 + 25, height / 2 - 100, 25, 200);
+        strokeWeight(2.5);
+        triangle(width / 2 - 50, height / 2 - 100, width / 2 - 50, height / 2 + 100, width / 2 + 75, height / 2);
+      }
+
+      function playNote(note) {
+        // Choose the frequency of the oscillator based on the note
+        osc.freq(midiToFreq(note), 0.01);
+
+        // increase amplitude over 0.2 seconds, then decrease over 0.5 seconds
+        osc.amp(0.3, 0.2);
+        osc.amp(0, 0.5);
+      }
+
+      function overCircle(x, y, diameter) {
+        const disX = x - mouseX;
+        const disY = y - mouseY;
+        if (sqrt(sq(disX) + sq(disY)) < diameter / 2) {
+            return true;
+        } else {
+            return false;
+        }
+      }
+
+      function mousePressed() {
+        // Only play the note if we are clicking on the circle
+        if (overCircle(cX, cY, cSize)) {
+            // for (let note = 0; note < n1.length; note++) {
+            //   playNote(n1[note]);
+            // }
+            // Play the note
+            playNote(n1[currentNote]);
+            // Increment it by one, modulo to wrap around when we reach the end
+            currentNote = (currentNote+1) % n1.length
+        }
+      }
+    </script>
+  </head>
+</html>
