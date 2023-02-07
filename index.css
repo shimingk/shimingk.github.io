@@ -80,6 +80,21 @@ img {
   justify-content: center;
 }
 
+#mp2 {
+  color: whitesmoke;
+  background-color: #ee1c5fcc;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+#mp2 > p {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
 a:hover {
   animation:alternate;
 }
