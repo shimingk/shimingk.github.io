@@ -1,6 +1,19 @@
 <html>
   <head>
     <link rel="stylesheet" href="../index.css">
+    <style>
+      h3 {
+        justify-content: flex-start;
+      }
+      .page-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <title>Gallery</title>
   <body>
@@ -10,27 +23,33 @@
         <!-- <a href="./projects/projects.html">projects</a> -->
         <a href="../resources.html">resources</a>
     </nav>
+    <h1>Gallery</h1>
     <div class="page-container">
-      <h1>Gallery</h1>
         <div>
+          <h3>Static</h3>
           <a href="p5-sketches/static.html">
-            <img src="mp2-static.PNG">
+            <img class="p5-sketches" src="mp2-static.PNG">
           </a>
-          Static
         </div>
         <div>
+          <h3>Random</h3>
           <a href="p5-sketches/random.html">
-            <img src="mp2-random.png">
+            <img class="p5-sketches" src="mp2-random.png">
           </a>
-          Random
         </div>
         <div>
+          <h3>Infinite Loop</h3>
           <a href="p5-sketches/loop.html">
-            <img src="mp2-loop.png">
+            <img class="p5-sketches" src="mp2-loop.png">
           </a>
-          Infinite Loop
+        </div>
+        <div>
+          <h3>Interactive</h3>
+          <a href="p5-sketches/interactive.html">
+            <img class="p5-sketches" src="mp2-interactive.png">
+          </a>
         </div>
     </div>
-    <h2>My&nbsp;<a href="mp2.html">writeup</a></h2>
+    <h2 style="padding: 5rem;">My&nbsp;<a href="mp2.html">writeup</a></h2>
   </body>
 </html>
