@@ -4,3 +4,4 @@ This repo is a portfolio that showcases my web technologies projects!
 - Dropdown in nav bar
 - Dark/light toggle
 - Color scheme
+- ## Organize files!
