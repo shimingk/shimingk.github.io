@@ -37,10 +37,10 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   /* position: relative; */
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .picture {
@@ -99,43 +99,4 @@ a:hover {
   animation:alternate;
 }
 
-.fade-container {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* margin-top: 30rem; */
-  position: relative;
-  /* height: 25rem;
-  width: 25rem; */
-}
 
-.fade-container .faded {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* left: 0;
-  right: 0;
-  /* margin-left: auto;
-  margin-right: auto; */
-}
-
-.fade-text {
-  transition: all 1s ease-out;
-  transform: translateY(0px);
-}
-
-.fade-in {
-  font-size: 2.5em;
-  text-transform: uppercase;
-  opacity: 0;
-  color: beige;
-  transition-delay: 0.2s;
-  transition-duration: 0.3s;
-}
-
-.fade-container:hover .fade-text {
-  opacity: 1;
-  transform: translateY(25px);
-}
