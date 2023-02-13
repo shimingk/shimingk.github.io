@@ -5,6 +5,8 @@
   overflow: hidden;
   width: 400px;
   text-align: center;
+  border-radius: 0.5rem;
+  margin: 5px;
 }
 
 .fade-container .fadedbox {

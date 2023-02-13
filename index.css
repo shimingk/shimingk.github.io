@@ -2,6 +2,14 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: large;
   display: flexbox;
+  color:#333;
+  background-color: white;
+  transition-duration: 1s;
+}
+
+body.dark {
+  color: white;
+  background-color: #333;
 }
 
 h1, h2, h3, p {
@@ -13,12 +21,91 @@ h1, h2, h3, p {
   margin: 5px;
 }
 
-nav {
+.navbar {
   display: flex;
   background-color: aliceblue;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: cadetblue;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: cornflowerblue;
+  transition-delay: 0.5s;
+  transition-duration: 0.5s;
+  transition: all 250ms ease-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.theme-toggle-button {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.theme-toggle-button:hover, .theme-toggle-button:focus {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+button {
+  display: block;
 }
 
 img {
@@ -33,14 +120,12 @@ img {
 }
 
 .picture-container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
-  /* background-color: grey; */
 }
 
 .picture {
