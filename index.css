@@ -21,6 +21,10 @@ h1, h2, h3, p {
   margin: 5px;
 }
 
+.famous-words {
+  font-style: italic;
+}
+
 .navbar {
   display: flex;
   background-color: aliceblue;
