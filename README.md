@@ -1,5 +1,7 @@
 # web tech portfolio
 This repo is a portfolio that showcases my web technologies projects!
+<details><summary>Things to do</summary>
+
 ## Features to implement
 - [X] Dropdown in nav bar
 - [X] Dark/light toggle
@@ -11,3 +13,4 @@ This repo is a portfolio that showcases my web technologies projects!
 - [ ] Dark/light toggle
     - [ ] button
 - [ ] Reformat resources content
+</details>
