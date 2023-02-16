@@ -5,6 +5,7 @@ body {
   color:#333;
   background-color: white;
   transition-duration: 1s;
+  margin: auto;
 }
 
 body.dark {
@@ -41,6 +42,7 @@ h1, h2, h3, p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  box-shadow: inset 0 0 0 0 #54b3d6;
 }
 
 .dropdown {
@@ -60,10 +62,11 @@ h1, h2, h3, p {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: cornflowerblue;
-  transition-delay: 0.5s;
+  /* background-color: cornflowerblue; */
+  /* transition-delay: 0.25s; */
   transition-duration: 0.5s;
-  transition: all 250ms ease-out;
+  /* transition: all 250ms ease-out; */
+  box-shadow: inset 250px 0 0 0 #54b3d6;
 }
 
 .dropdown-content {
@@ -86,6 +89,7 @@ h1, h2, h3, p {
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -100,7 +104,7 @@ h1, h2, h3, p {
 }
 
 .theme-toggle-button:hover, .theme-toggle-button:focus {
-  transform: scale(1.05);
+  transform: scale(1.15);
   transition-duration: 0.5s;
 }
 
