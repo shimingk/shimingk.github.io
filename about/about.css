@@ -1,0 +1,32 @@
+.intro-grid {
+  display: grid;
+  /* grid-template:
+    "bio-picture intro-paragraph" 1fr
+    "bio-picture intro-paragraph" 25rem
+    "famous-words famous-words" 25rem 1fr; */
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 400px 500px 400px;
+  grid-template-areas:
+    "bio-picture intro-paragraph"
+    "bio-picture intro-paragraph"
+    "famous-words hobb-pst";
+  /* border-style: double; */
+}
+
+/* .bio-picture {
+  border-style: solid;
+  border-radius: 5px;;
+  border-color: teal;
+} */
+
+.intro-paragraph {
+  margin: 1rem;
+  display: grid;
+  /* border-style: ridge; */
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.famous-words {
+  font-style: italic;
+  margin: 5rem;
+}

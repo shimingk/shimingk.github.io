@@ -9,7 +9,9 @@ This repo is a portfolio that showcases my web technologies projects!
 ## BTS
 - [x] ~~Organize files!~~
 ## Features to improve
-- [ ] nav bar dark/light colors
+- [ ] nav bar
+    - [ ] dark/light colors
+    - [ ] transition/hover effect
 - [ ] Dark/light toggle
     - [ ] button
 - [ ] Reformat resources content
