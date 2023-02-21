@@ -25,6 +25,7 @@ function makeNav(links) {
         <a href="/projects/mp0.html">mp0</a>
         <a href="/projects/mp1.html">mp1</a>
         <a href="/projects/mp2.html">mp2</a>
+        <a href="/projects/mp3.html">mp3</a>
       </div>
     </div>
     <button class="theme-toggle-button">

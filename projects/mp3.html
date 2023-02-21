@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <title>MP3</title>
+  <body class="dark">
+    <div id="nav-container"></div>
+    <div class="proj-container">
+      <div>
+        <h2>Projects</h2>
+        <p class="intro-paragraph">
+          <em>PlayBrosski!</em>
+        </p>
+        <div id="mp3">
+          <h3>MP3 - Atari Breakout Game</h3>
+          <h4>Overview</h4>
+          <p>I made a simple game based on Atari Breakout that can be found&nbsp;<a href="https://shimingk.github.io/web-tech-game/" target="_blank">here</a>!</p>
+          <img style="object-fit: cover; padding-bottom: 25px;" src="mp3/mp3-demo.gif">
+          <h4>The Development Process</h4>
+          <p>
+            Before I began brainstorming the types of games I wanted to make,
+            I looked into how to set up my own web development toolchain since
+            I wanted to build and deploy it to be free to play on the web.<br>
+            Afterwards, my game development involves the following:
+          </p>
+          <ol>
+            <li>
+                Brainstorming what kind of game I wanted to create. Here's the games that I got inspiration from:
+                <ul>
+                    <li>Pong</li>
+                    <li>Peggle</li>
+                    <li>Atari Breakout</li>
+                </ul>
+            </li>
+            <li>
+                Deciding on what external JS libraries to help build my game:
+                <ul>The Game engines I was looking at were:
+                    <li>p5.play: ultmately p5.play was my choice due to the fact that it incorporates p5.js to render graphics</li>
+                    <li>pixi.js</li>
+                </ul>
+                Along with p5.js since I have prior experience with the library.
+            </li>
+            <li>Game Implementation involved utilizing existing p5.js Pong and Breakout games as a scaffold for my game.</li>
+            <li>Adjusting window screen size to improve overall experience with the game.</li>
+            <li>
+                Incorporating sprites from p5.play to my game in the mouse-controlled paddle:<br>
+                <img style="object-fit: contain;" src="mp3/paddle.png">
+            </li>
+            <li>
+                Implement 2nd paddle (meant to be for the computer)<br>
+                <img style="object-fit: contain;" src="mp3/2nd paddle.png">
+            </li>
+          </ol>
+          <h4>Issue Deep Dive</h4>
+          <p>
+            An issue that came up with this project was in my beginning stage of game development.
+            After I went through how I had to build and deploy the game project and the p5 sketches I took inspuiration from,
+            I decided to use an Atari Breakout example as my scaffold to build my game. I encountered the issue of drawing shapes and creating sprites
+            to be difficult, especially on a p5 canvas with small dimensions. My temporary quick fix for this issue was to establish set canvas dimensions
+            that are as large as it should be without compromising overall gaming experience. Since this is just a temporary fix, I would need to work on investigating
+            how I can make it so that my game's resolution is maintained in various screen sizes.
+          </p>
+          <h4>Looking forward</h4>
+          <p>
+            I aim to continuing iterating on the following for this project:
+            <ul>
+              <li>Improve on my 2ndary paddle (right now it's not doing much)</li>
+              <li>Add moving bricks to hit</li>
+              <li>Add some audio to Game Over and You Win screens</li>
+              <img style="object-fit: cover;" src="mp3/mp3-game-over.png">
+              <img style= "object-fit: cover;" src="mp3/mp3-win.png">
+            </ul>
+          </p>
+          <h4>Kudos to the following:</h4>
+          <ul>
+            <li><a href="https://workshops.hackclub.com/atari_breakout/" target="_blank">Atari Breakout Example</a></li>
+            <li><a href="https://editor.p5js.org/annawasson/sketches/BQFIoo6s2" target="_blank">annawasson's Pong Game</a></li>
+            <li><a href="https://creative-coding.decontextualize.com/making-games-with-p5-play/" target="_blank">Allison Parrish's p5.play examples</a></li>
+            <li><a href="https://p5js.org/reference/" target="_blank">p5.js reference</a></li>
+            <li><a href="https://p5play.org/learn/" target="_blank">p5.play reference</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="../index.js" type="module" defer></script>
+  </body>
+</html>
