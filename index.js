@@ -10,7 +10,7 @@ console.log("Welcome to my portfolio page!");
 let navPages = [
   { name: "home", link: "/index.html" },
   { name: "about", link: "/about/about.html" },
-  { name: "resources", link: "/resources.html" },
+  { name: "resources", link: "/resources/cheatsheet.html" },
   { name: "gallery", link: "/projects/gallery.html" }
 ];
 
