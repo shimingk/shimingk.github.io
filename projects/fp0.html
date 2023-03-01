@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <title>FP0</title>
+  <body class="dark">
+    <div id="nav-container"></div>
+    <div class="proj-container">
+      <div>
+        <h2>Projects</h2>
+        <p class="intro-paragraph">
+          <em>PlayBrosski! Play Harder!</em>
+        </p>
+        <div id="fp0" style="margin: 5rem;">
+          <h3>FP0 - Reworking My Atari Breakout Game</h3>
+          <h4>Description</h4>
+          <p>
+            For my final project, I plan on building on my Atari Breakout game from MP3 by adding a
+            backend database to store high scores and obstacles to increase overall game complexity and difficulty.
+          </p>
+          <h4>Envisioned interface</h4>
+          <img src="./fp0/main-menu.jpeg" alt="sketch of proposed main menu interface">
+          <img src="./fp0/hi-score.jpeg" alt="sketch of proposed high-score interface">
+          <h4>Project Versions</h4>
+          <ol>
+            <li>
+                Prototype: The prototype version of my game will focus on implementing the aforementioned high score feature 
+                with a working "evil" paddle that blocks the user's attempt to break all the blocks. The scoreboard will
+                only display the top 5 players with their respective scores, regardless of their names.
+                The high scores and menu interfaces will have barebones implementations with minimal styling.
+            </li>
+            <br>
+            <li>
+                Final: The final prototype will mostly be focusing on refinements of both old and new features that
+                are brought up in the prototype version, which would mean incorporating CSS styling if applicable.
+                This game version will allow for unique usernames with their
+                respective high scores instead of having duplicate usernames with different scores on the leaderboard.
+            </li>
+          </ol>
+          <h4>Development Plan</h4>
+          <ol>
+            <li>Set up Firebase and connect Firebase database to project app</li>
+            <li>Implement main menu interface</li>
+            <li>Implement leaderboard</li>
+            <li>Finalize "evil" paddle functionality (Milestone 1: Prototype)</li>
+            <br>
+            <li>Improve leaderboard with unique usernames</li>
+            <li>Rework main menu to reflect unique username changes to leaderboard</li>
+            <li>Finalize CSS styling for interfaces and objects (Milestone 2: Final)</li>
+          </ol>
+          <h4>Some unknowns</h4>
+          <ul>
+            <li>Firebase documentation</li>
+            <li>Incorporate "evil" paddle obstacle</li>
+          </ul>
+          <h4>Stretch Goals</h4>
+          <ul>
+            <li>Allow user to see past top 5 high scores in the leaderboard</li>
+            <li>Allow user to manually change game settings (number of blocks, speed of "evil" paddle(s), etc.)</li>
+            <li>Improve ball physics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="../index.js" type="module" defer></script>
+  </body>
+</html>

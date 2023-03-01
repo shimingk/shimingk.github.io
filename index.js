@@ -10,7 +10,6 @@ console.log("Welcome to my portfolio page!");
 let navPages = [
   { name: "home", link: "/index.html" },
   { name: "about", link: "/about/about.html" },
-  { name: "resources", link: "/resources/cheatsheet.html" },
   { name: "gallery", link: "/projects/gallery.html" }
 ];
 
@@ -26,6 +25,12 @@ function makeNav(links) {
         <a href="/projects/mp1.html">mp1</a>
         <a href="/projects/mp2.html">mp2</a>
         <a href="/projects/mp3.html">mp3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">resources</button>
+      <div class="dropdown-content">
+        <a href="/resources/cheatsheet.html">cheatsheet</a>
       </div>
     </div>
     <button class="theme-toggle-button">
