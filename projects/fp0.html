@@ -12,7 +12,7 @@
           <em>PlayBrosski! Play Harder!</em>
         </p>
         <div id="fp0" style="margin: 5rem;">
-          <h3>FP0 - Reworking My Atari Breakout Game</h3>
+          <h3>FP0 Propsosal - Reworking My Atari Breakout Game</h3>
           <h4>Description</h4>
           <p>
             For my final project, I plan on building on my Atari Breakout game from MP3 by adding a
@@ -58,6 +58,79 @@
             <li>Allow user to see past top 5 high scores in the leaderboard</li>
             <li>Allow user to manually change game settings (number of blocks, speed of "evil" paddle(s), etc.)</li>
             <li>Improve ball physics</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h1>FP0 Writeup</h1>
+        <div style="margin: 5rem;">
+          <h3>Block Buster Game Prototype</h3>
+          <h4>Overview</h4>
+          <p>
+            For my final project in HCDE 438, I decided to continue working on my previous game based on Atari Breakout which can be found&nbsp;<a href="https://shimingk.github.io/block-buster-prototype/" target="_blank">here</a>!
+          </p>
+          <img src="fp0/fp0-main.gif" width="1200" height="800" alt="block buster prototype demo">
+          <h4>The Development Process</h4>
+          <p>
+            I followed through most of the steps I outlined in the propsosal.
+            First, I made sure I had Firebase set up correctly in my project since I anticipated
+            Firebase was the biggest problem when prototyping. I knew I got Firebase to work with my prototype project
+            when I was able to store and save user's data (usernames and their scores) on a leaderboard.
+          </p>
+          <img src="fp0/fp0-win-leaderboard.gif" width="1200" height="800">
+          <p>
+            I continued to work through my outlined development plan by implementing my "evil" paddle/obsacle
+            that is meant to prevent the user's attempt to clear blocks in the screen. After careful considerations,
+            I decided to rework most of my game code as it originally uses mostly the p5.js library. Utilizing sprites in my
+            game would prove to be a better choice of implementation as it was able to minimize a significant amount of game development
+            code.
+          </p>
+          <h4>Project Scope</h4>
+          <p>
+            Going into this final project and its prototype, I knew that if I wanted to get the most
+            out of the JS libraries I set out to use in the previous iteration, I had to incorporate spires from p5.play
+            more into this project. As a result, a lot of effort was directed towards re-implementing game aspects (ball, blocks, & paddles)
+            using p5.play instead of how the game was previously with mostly p5.js. I was not able to implement a main menu interface since most
+            of my time and effort was invested into the aforementioned game aspects.
+          </p>
+          <h4>Time Management</h4>
+          <p>
+            Again, a lot of time in developing this prototype was focused on re-implementing the game with more p5.play.
+            This was the main roadblock for this prototype iteration. I had to focus especially on overall sprite physics and interactions
+            since using sprites for my game required understanding of how sprites from p5.play work in general.
+          </p>
+          <h4>Implementation Plan</h4>
+          <p>
+            Even though I was not able to implement a main menu interface for the prototype, I believe that through developing this new
+            leaderboard feature and where I have it in this prototype can still work out. If I choose to leave the leaderboard where it's at right now,
+            I will not need to do any final iterations and styling for any additional screens and interfaces. I would continue with my current development plan.
+            But if I choose to pursue this menu interface,
+            it would be one of the first action items for the final version. 
+          </p>
+          <h4>Issue Deep Dive</h4>
+          <p>
+            An issue that came up with this prototype is figuring out the physics/interactions between sprites (ball, paddles, blocks)
+            in my game. Initially, my spirte paddles and blocks would spin/rotate whenever the ball collides with them. After carefully
+            looking over p5.play's referene page on spirte physics, I learned that if I wanted my sprites to maintain their default horizontal
+            orientation, I must specify their 'collider' property to 'kinematic'.
+          </p>
+          <h4>Looking forward</h4>
+          <p>
+            I aim to continue iterating on the following for this prototype in my final iteration:
+          </p>
+            <ul style="padding: 1rem;">
+              <li>Improve on ball collision physics as it is inconsistent</li>
+              <li>Styling Leaderboard, Input, text and game content</li>
+              <li>Implement adjustable screen sizes, if applicable</li>
+            </ul>
+          <h4>Kudos to the following:</h4>
+          <ul>
+            <li><a href="https://firebase.google.com/docs/firestore/quickstart#web-version-9" target="_blank">Firebase Documentation</a></li>
+            <li><a href="https://creative-coding.decontextualize.com/making-games-with-p5-play/" target="_blank">Allison Parrish's p5.play examples</a></li>
+            <li><a href="https://p5js.org/reference/" target="_blank">p5.js reference</a></li>
+            <li><a href="https://p5play.org/learn/" target="_blank">p5.play reference</a></li>
+            <li><a href="https://github.com/branchwelder/webdev-template" target="_blank">Branchwelder's template project</a> that I used as a scaffold for deploying my prototype</li>
+            <li><a href="https://hjchoi28.github.io/bio/bio.html" target="_blank">Hwa Jung</a> for helping me set up and deploy this prototype with vite</li>
           </ul>
         </div>
       </div>
