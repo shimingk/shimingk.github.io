@@ -25,6 +25,7 @@ function makeNav(links) {
         <a href="/projects/mp1.html">mp1</a>
         <a href="/projects/mp2.html">mp2</a>
         <a href="/projects/mp3.html">mp3</a>
+        <a href="/projects/fp.html">Final Project</a>
       </div>
     </div>
     <div class="dropdown">
@@ -42,6 +43,17 @@ function makeNav(links) {
 }
 
 render(makeNav(navPages), document.getElementById("nav-container"));
+
+function addFavicon() {
+  return html`
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  `;
+}
+
+render(addFavicon(), document.querySelector('head'));
 
 document.querySelector('.theme-toggle-button').addEventListener
   ('click', () => {

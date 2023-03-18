@@ -1,8 +1,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="../index.css" />
+    <style>
+      img {
+        height: 100%;
+        width: auto;
+      }
+    </style>
   </head>
-  <title>FP0</title>
+  <title>Final Project</title>
   <body class="dark">
     <div id="nav-container"></div>
     <div class="proj-container">
@@ -19,12 +25,12 @@
             backend database to store high scores and obstacles to increase overall game complexity and difficulty.
           </p>
           <h4>Envisioned interface</h4>
-          <img src="./fp0/main-menu.jpeg" alt="sketch of proposed main menu interface">
-          <img src="./fp0/hi-score.jpeg" alt="sketch of proposed high-score interface">
+          <img src="./fp0/main-menu.jpeg" alt="sketch of proposed main menu interface" style="height: 300px;">
+          <img src="./fp0/hi-score.jpeg" alt="sketch of proposed high-score interface" style="height: 300px;">
           <h4>Project Versions</h4>
           <ol>
             <li>
-                Prototype: The prototype version of my game will focus on implementing the aforementioned high score feature 
+                Prototype: The prototype version of my game will focus on implementing the aforementioned high score feature
                 with a working "evil" paddle that blocks the user's attempt to break all the blocks. The scoreboard will
                 only display the top 5 players with their respective scores, regardless of their names.
                 The high scores and menu interfaces will have barebones implementations with minimal styling.
@@ -62,14 +68,14 @@
         </div>
       </div>
       <div>
-        <h1>FP0 Writeup</h1>
+        <h1>Final Prototype Writeup</h1>
         <div style="margin: 5rem;">
           <h3>Block Buster Game Prototype</h3>
           <h4>Overview</h4>
           <p>
             For my final project in HCDE 438, I decided to continue working on my previous game based on Atari Breakout which can be found&nbsp;<a href="https://shimingk.github.io/block-buster-prototype/" target="_blank">here</a>!
           </p>
-          <img src="fp0/fp0-main.gif" width="1200" height="800" alt="block buster prototype demo">
+          <div style="display: grid;"><img src="fp0/fp0-main.gif" alt="block buster prototype demo" style="height: 300px;"></div>
           <h4>The Development Process</h4>
           <p>
             I followed through most of the steps I outlined in the propsosal.
@@ -77,7 +83,7 @@
             Firebase was the biggest problem when prototyping. I knew I got Firebase to work with my prototype project
             when I was able to store and save user's data (usernames and their scores) on a leaderboard.
           </p>
-          <img src="fp0/fp0-win-leaderboard.gif" width="1200" height="800">
+          <img src="fp0/fp0-win-leaderboard.gif" alt="leaderboard demo of my game" style="height: 300px;">
           <p>
             I continued to work through my outlined development plan by implementing my "evil" paddle/obsacle
             that is meant to prevent the user's attempt to clear blocks in the screen. After careful considerations,
@@ -105,7 +111,7 @@
             leaderboard feature and where I have it in this prototype can still work out. If I choose to leave the leaderboard where it's at right now,
             I will not need to do any final iterations and styling for any additional screens and interfaces. I would continue with my current development plan.
             But if I choose to pursue this menu interface,
-            it would be one of the first action items for the final version. 
+            it would be one of the first action items for the final version.
           </p>
           <h4>Issue Deep Dive</h4>
           <p>
@@ -132,6 +138,51 @@
             <li><a href="https://github.com/branchwelder/webdev-template" target="_blank">Branchwelder's template project</a> that I used as a scaffold for deploying my prototype</li>
             <li><a href="https://hjchoi28.github.io/bio/bio.html" target="_blank">Hwa Jung</a> for helping me set up and deploy this prototype with vite</li>
           </ul>
+        </div>
+      </div>
+      <div>
+        <h1>Final Project Writeup</h1>
+        <div style="margin: 5rem;">
+        <h3>Block Buster Game</h3>
+        <h4>Overview</h4>
+        <p>
+          For my final project in HCDE 438, I iterated from my working prototype of my previous game based on Atari Breakout which can be found&nbsp;<a href="https://shimingk.github.io/block-buster/" target="_blank">here</a>!
+        </p>
+        <h4>The Development Process</h4>
+        <p>
+          I continued working on my Block Buster game by focusing on overall ball interactions across the board
+          while attemping to add styles to the leaderboard and overall game environment.
+          Even though I could have cloned my prototype repository, I decided to start over with the same initialization and onboarding process
+          when I first started working on my prototype, which was to create a whole new repository and copying all essential code from the prototype
+          into my new repository. I also wanted to gain more practice with Firebase again so I went through the entire process of creating a new project
+          and app for my final iteration in Firebase. After setting up my app in Firebase, I continued working on improving ball collisions with blocks and paddles
+          in-game.
+        </p>
+        <img src="/projects/fp/fp-collisions.gif" alt="gif demonstrating improved ball collisions" style="height: 300px;">
+        <img src="/projects/fp/fp-score.gif" alt="gif demonstrating leaderboard and score input feature" style="height: 300px;">
+        <h4>Issue Deep Dive</h4>
+        <p>
+          An issue that I encountered throughout my various iterations of my game was that the game screen was never centered the way I wanted. This issue was apparaent in both my first iteration of the game
+          and in the prototyping phase. After some trial and error in my final process of styling my game, I managed to make all elements in my game centered on the screen.
+        </p>
+        <img src="/projects/fp/uncentered.JPG" alt="prototype image that shows the game screen is offset, not centered" style="height: 300px;">
+        <img src="/projects/fp/fp-thumbnail.jpg" alt="final game image showing game contents are centered" style="height: 300px;">
+        <h4>Ideas and Future Work</h4>
+        <p>
+          Even though this is my final project for HCDE 438, there are still ways which I can still iterate on. Games always have their bugs and flaws.
+          Block Buster is no different, so besides the obvious ways to improve this game (e.g. game balancing), here are some ways I can further improve the game:
+        </p>
+        <ul>
+          <li>Adding a button to submit user scores into the leaderboard</li>
+          <li>Allowing users to change the difficulty of the game through multiple paddle obstacles and/or more blocks to break</li>
+          <li>Incorporate additional controls (e.g. WASD & arrow keys) for paddle movement</li>
+        </ul>
+        <h4>Kudos to the following:</h4>
+        <ul>
+          <li><a href="https://p5play.org/learn/" target="_blank">p5.play reference</a></li>
+          <li><a href="https://github.com/branchwelder/webdev-template" target="_blank">Branchwelder's template project</a> that I used as a scaffold for deploying my game</li>
+          <li>Again, thanks <a href="https://hjchoi28.github.io/bio/bio.html" target="_blank">Hwa Jung</a> for reminding me how to set up and deploy this prototype with vite</li>
+        </ul>
         </div>
       </div>
     </div>
